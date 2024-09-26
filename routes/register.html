@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <style>
+        #address {
+            width: 30%;
+        }
+
+        #imagepart {
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 6px;
+            width: 30%;
+        }
+
+        #role {
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 13px;
+            width: 30%;
+        }
+
+        #logo {
+            float: left;
+            margin-left: 10px;
+        }
+
+        #navigation {
+            float: right;
+            margin-right: 10px;
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        #navigation a {
+            margin-left: 15px;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px;
+            padding-top:20%;
+        }
+        #Bodysection h3 {
+         font-size: 0.25in;
+        }
+
+        
+    </style>
+    <title>E Voting System</title>
+</head>
+<body>
+    <center>
+        <div id="headerSection">
+            <div id="logo">
+                <img src="../upload/vote.jpg" alt="Voting System Logo" width="100" height="100">
+            </div>
+
+            <div id="navigation">
+                <a href="../header/home.html">Home</a>
+                <a href="../header/about.html">About</a>
+                <!--a href="https://t.me/Help_votersBot" target="_blank">Contact</a> -->
+               <a href="../header/contact.html">Contact</a>
+            </div>
+            <div id="headerSection">
+
+                <h1>E-voting System</h1>
+    
+            </div>
+        </div>
+        <hr>
+        <div id="Bodysection">
+            <h3>Registration</h3>
+            <form action="../api/register.php" method="POST" enctype="multipart/form-data">
+                <input type="text" name="name" placeholder="Enter a Name">
+                <input type="number" name="mobile" placeholder="Enter a mobile"><br></br>
+                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="cpassword" placeholder="Confirm Password"><br></br>
+                <input id="address" type="text" name="address" placeholder="Address"><br></br>
+
+                <div id="imagepart">
+                    Upload image:<input type="file" name="photo">
+                </div>
+                <br>
+
+                <div id="role">
+                    Select role : <select name="role">
+                        <option value="1">Voter</option>
+                        <option value="2">Group</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <br>
+                <button style="
+                    padding: 5px;
+                    border-radius: 5px;
+                    background-color: #0984e3;
+                    color: white;
+                    font-size: 15px">
+                    Register
+                </button>
+
+                <br></br>
+                Already Registered? <a href="../index.html">Login here</a>
+            </form>
+        </div>
+    </center>
+</body>
+</html>
